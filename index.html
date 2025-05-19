@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz ENEM</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <button id="hamburger-btn" onclick="toggleSidebar()">☰</button>
+
+  <div class="container">
+    <div class="left">
+      <h1>Quiz ENEM</h1>
+      <div id="question-container"></div>
+      <button onclick="loadQuestion()">Nova questão</button>
+    </div>
+
+    <div class="right" id="sidebar">
+      <h2>Estatísticas</h2>
+      <div class="tabs">
+        <div id="tab-geral">
+          <p><strong>Respondidas:</strong> <span id="total"></span></p>
+          <p><strong>Acertos:</strong> <span id="acertos"></span></p>
+          <p><strong>Porcentagem:</strong> <span id="porcentagem"></span>%</p>
+          <p><strong>Tempo médio:</strong> <span id="tempo-medio"></span>s</p>
+          <button class="btn-clear" onclick="clearStats()">Limpar Estatísticas</button>
+        </div>
+        <div id="tab-disciplinas" class="cards-container">
+          <div id="disciplinas-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
